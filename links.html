@@ -1,0 +1,15 @@
+﻿    <div class="col-12 text-center">
+        <input id="Links" type="button" class="menuBtn btn btn-block btn-secondary" 
+               value="CAPD Links+News" 
+               />
+               <!--onclick="location.href = this.id + '.aspx';"-->
+    </div>	
+<script>
+    $(".menuBtn").on("click", function () {
+        var page = this.id + ".aspx";// $(this).attr('id') + ".aspx";
+        var userSysID = getCookie("userSysID");
+        disableBtn(this);
+        $("#tLogMenu").html(mySpinner);
+        location.href = page;
+    })
+</script>
